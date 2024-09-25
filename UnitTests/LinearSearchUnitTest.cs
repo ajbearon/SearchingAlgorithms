@@ -18,8 +18,9 @@ namespace UnitTests
         public void TestFirstItemFound()
         {
             var testItems = new[] { "Florida", "Georgia", "Delaware", "Alabama", "California" };
+            var expected = 0;
             var actual = Search.LinearSearch(testItems, "Florida");
-            Assert.Equal(0, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
