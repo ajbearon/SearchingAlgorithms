@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SearchingAlgorithms\SearchingAlgorithms.csproj" />
+    <ProjectReference Include="..\SearchingAlgorithms\SearchingSortingAlgorithms.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5,8 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly:InternalsVisibleTo("UnitTests")]
-
 namespace SearchingAlgorithms
 {
     internal static class Search
@@ -37,5 +35,21 @@ namespace SearchingAlgorithms
                 return -1;
             }
         }
+
+        public static int LinearSearch2(
+            string[] items, 
+            string itemToFind)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i] == itemToFind)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
     }
 }
