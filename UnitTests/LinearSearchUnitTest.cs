@@ -9,16 +9,18 @@ namespace UnitTests
         public void TestMiddleItemFound()
         {
             var testItems = new[] { "Florida", "Georgia", "Delaware", "Alabama", "California" };
+            var expected = 2;
             var actual = Search.LinearSearch(testItems, "Delaware");
-            Assert.Equal(2, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
         public void TestFirstItemFound()
         {
             var testItems = new[] { "Florida", "Georgia", "Delaware", "Alabama", "California" };
+            var expected = 0;
             var actual = Search.LinearSearch(testItems, "Florida");
-            Assert.Equal(0, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
@@ -43,6 +45,15 @@ namespace UnitTests
             var testItems = new string[] { };
             var actual = Search.LinearSearch(testItems, "London");
             Assert.Equal(-1, actual);
+        }
+
+        [Fact(Skip = "Ignore")]
+        public void TestNull()
+        {
+            string[] testItems = null;
+            var expected = -1;
+            var actual = Search.LinearSearch(testItems, "London");
+            Assert.Equal(expected, actual);
         }
     }
 }
